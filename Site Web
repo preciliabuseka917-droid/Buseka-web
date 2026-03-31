@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>ACCUEIL-Gestion des étudiants</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+                background: linear-gradient(135deg, #4facfe, #e2e1e1db);
+                color: rgba(236, 230, 231, 0.885);
+            }
+            header {
+                background: rgba(0, 0, 0, 0.2);
+                padding: 15px;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+            }
+            .container {
+                text-align: center;
+                margin-top: 100px;
+            }
+            h1{
+                font-size: 60px;
+            }
+            p {
+                font-size: 25px;
+            }
+            .button {
+                margin-top: 50px;
+            }
+            a {
+                display: inline-block;
+                margin: 10px;
+                padding: 15px 25px;
+                text-decoration: none;
+                color: white;
+                background: #333;
+                border-radius: 8px;
+                font-size: 16px;
+                transition: 0.3s;
+            }
+            a:hover {
+                background: #500;
+                transform: scale(1.05);
+            }
+            footer {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.2);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            Gestion des Etudiants
+        </header>
+        <div class="container">
+            <h1>Bienvenue</h1>
+            <p>Application de gestion des étudiants simple et efficace</p>
+            <div class="buttons">
+                <a href="liste d'étudiants.html"> Gérer les étudiants</a>
+                <a href="login.html">Se connecter</a>
+                <a href="inscription.html"> s'inscrire</a>
+            </div>
+        </div>
+        <footer>
+            @ 2026 - Projet étudiant
+        </footer>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Connexion</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: navy blue;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .login-container {
+                background: black;
+                padding: 70px;
+                border-radius: 10px;
+                box-shadow: 0px, 5px, 15px rgb(0, 0, 0, 0.2);
+                width: 300px;
+                text-align: center;
+            }
+            h2 {
+                color: #eddede;
+                margin-bottom: 20px;
+            }
+            input {
+                width: 100px;
+                padding: 10px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            input:focus {
+                border-color: #4facfe;
+                outline: none;
+            }
+            button {
+                width: 100%;
+                padding: 10px;
+                background: #4facfe;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            } 
+            button:hover {
+                background: #00c6ff;
+            }
+            .footer  {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #777;
+            }
+            .footer a {
+                color: #4facfe;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <h2>Connexion</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Mot de passe" required>
+                <button type="submit">se connecter</button>
+            </form>
+            <div class="footer">
+                Pas de compte ? <a href="#">Inscrivez-vous</a>
+            </div>
+        </div>    
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gestion des étudiants</title>
+        <style>
+            body {
+                font-family: Arial;
+                background: hsla(196, 44%, 77%, 0.974);
+                padding: 35PX;
+            }
+            h2 {
+                text-align: center;
+            }
+            .container {
+                max-width: 900px;
+                margin: auto;
+                background: whitesmoke;
+                padding: 70px;
+                border-radius: 20px;
+            }
+            input {
+                padding: 5px;
+                margin: 5px;
+                width: 50%;
+            }
+            button {
+                padding: 15px;
+                margin: 35px;
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+            }
+            .add {background: black; color: white;}
+            .delete{background: black; color: white;}
+            .update{background: black; color: white;}
+            .search{background: black; color: white;}
+            table {
+                width: 100%;
+                margin-top: 20px;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid #ccc;
+                padding: 10px;
+                text-align: center;
+            }
+            th {
+                background: #23a9e3e7;
+                color: hsla(100, 9%, 93%, 0.951);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>INSCRIPTION DES ETUDIANTS</h2>
+            <input type="text" id="nom" placeholder="Nom">
+            <input type="text" id="prenom" placeholder="prénom">
+            <input type="text" id="classe" placeholder="Classe">
+            <br>
+            <button class="add" onclick="ajouter()">Enregistre</button>
+            <button class="update" onclick="modifier()">Modifier</button>
+            <button class="delete" onclick="supprimer()">Supprimer</button>
+            <button class="search" onclick="rechercher()">Rechercher</button>
+            
+        </div>
+    </body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>liste des étudiants</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background: #f4f4f4;
+                margin: 0;
+            }
+            header {
+                background: #4facfe;
+                color: rgb(248, 245, 241);
+                padding: 15px;
+                text-align: center;
+                font-size: 22px;
+            }
+            .container {
+                width: 90%;
+                max-width: 900px;
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+            }
+            input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #f8eded;
+                border-radius: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 12px;
+                border: 1px solid #43c7e5ed;
+                text-align: center;
+            }
+            th {
+                background: #4fbbfe;
+                color: rgb(248, 233, 233);
+            }
+            button {
+                padding: 6px 10px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                color: rgba(255, 255, 255, 0.959);
+            }
+            .delete {
+                background: rgba(255, 0, 21, 0.867);
+            }
+            .delete:hover {
+                background: darkred;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            Liste des étudiants inscrits
+        </header>
+     <div class="container">
+    <div class="card">
+        <div class="header">Voici la Liste des Étudiants Inscrits</div>
+        <div class="content">
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                </tr>
+
+                <tr>
+                    <td>1</td>
+                    <td>Balenga</td>
+                    <td>Julie</td>
+                    <td>Juliebalenga@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Kazadi</td>
+                    <td>Joslin</td>
+                    <td>joslinkazadi@gmail.com</td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
+
+
+
+
